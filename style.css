@@ -1,4 +1,20 @@
-body {background-color:tan;}
-h1{color:green;}
+body {background-color:black;}
 
+h1 {color: grey}
 
+#outer {
+    margin: auto;
+    text-align: left;
+    background-color:white;
+    width: 75%;
+    padding: 5%;
+    border-radius: 25px;
+}
+
+#inner {margin: 5%}
+
+label {
+    display: inline-block;
+    width: 115px;
+    margin-bottom: 10px;
+}
