@@ -10,8 +10,8 @@ function checkdata() {
     var rate = document.getElementById("rate");
     var years = document.getElementById("years");
     //Check if amount field is empty
-    if(amount.value == "") {
-        alert("Please enter an amount");
+    if(amount.value <= 0 || amount.value == "") {
+        alert("Please enter a positive amount");
         amount.focus();
         return false;
     }
