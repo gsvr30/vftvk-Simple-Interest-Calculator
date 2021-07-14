@@ -1,7 +1,7 @@
 window.onload = function(){
     document.getElementById("principal").value = "";
     document.getElementById("rate").value = 1;
-    document.getElementById("years").value = "";
+    document.getElementById("years").value = 1;
 }
 
 function checkdata() {
@@ -12,12 +12,6 @@ function checkdata() {
     if(amount.value <= 0 || amount.value == "") {
         alert("Please enter a positive amount");
         amount.focus();
-        return false;
-    }
-    //Check if year field is empty
-    if(years.value == ""){
-        alert("Please enter the number of years");
-        years.focus();
         return false;
     }
     //If all is well return true.
@@ -45,3 +39,4 @@ function compute() {
         document.getElementById("inner").appendChild(result);
     }
 }
+        
