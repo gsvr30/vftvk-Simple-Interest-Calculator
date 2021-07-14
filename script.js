@@ -1,24 +1,17 @@
 window.onload = function(){
     document.getElementById("principal").value = "";
-    document.getElementById("rate").value = 0;
+    document.getElementById("rate").value = 1;
     document.getElementById("years").value = "";
 }
 
 function checkdata() {
     //Create references to the input elements we wish to validate
     var amount = document.getElementById("principal");
-    var rate = document.getElementById("rate");
     var years = document.getElementById("years");
     //Check if amount field is empty
     if(amount.value <= 0 || amount.value == "") {
         alert("Please enter a positive amount");
         amount.focus();
-        return false;
-    }
-    //Check if rate field is empty
-    if(rate.value == 0){
-        alert("Please enter an interest rate > 0");
-        rate.focus();
         return false;
     }
     //Check if year field is empty
@@ -44,10 +37,11 @@ function compute() {
 
         var result = document.createElement("p");
         result.setAttribute("id", "result");
-        result.innerHTML = "If you deposit " + p +
-                            ", <br>" + "at an interest of " + r +
-                            "%, <br>" + "You will receive an amount of " +
-                            si + ", <br>" + "in the year " + time_period;
+        result.innerHTML = "If you deposit <mark>" + p +
+                            "</mark>, <br>" + "at an interest of <mark>" + r +
+                            "%</mark>, <br>" + "You will receive an amount of <mark>" +
+                            si + "</mark>, <br>" + "in the year <mark>" +
+                            time_period + "</mark>";
         document.getElementById("inner").appendChild(result);
     }
 }
